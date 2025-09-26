@@ -1,0 +1,12 @@
+# copy to .env and fill with REAL values (do NOT commit .env)
+PORTAL_AUTH_PORT=8080
+
+# Mailcow admin API endpoint/key (internal to the mailcow network)
+MAILCOW_URL=http://nginx-mailcow
+MAILCOW_API_KEY=__REPLACE_ME__
+
+# Default IMAP/SMTP host for Roundcube (informational)
+IMAP_HOST=imap
+IMAP_PORT=993
+SMTP_HOST=postfix-mailcow
+SMTP_PORT=587
