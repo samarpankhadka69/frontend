@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  auth:
+    build: ./portal/auth
+    env_file: .env
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORTAL_AUTH_PORT:-8080}
+    ports:
+      - "8080:8080"         # dev convenience; remove in prod
+    restart: unless-stopped
+
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./portal/web/public:/usr/share/nginx/html:ro
+    ports:
+      - "8081:80"          # dev convenience; remove in prod
+    restart: unless-stopped
