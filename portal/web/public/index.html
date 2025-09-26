@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QRZMail Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>QRZMail Portal</h1>
+    <nav>
+      <a href="/webmail/" rel="noopener">Open Webmail (Roundcube)</a>
+      <button id="check-health" type="button">Check API</button>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Register</h2>
+      <form id="register-form" autocomplete="off">
+        <label>Email
+          <input name="email" type="email" placeholder="user@example.com" required />
+        </label>
+        <label>Password
+          <input name="password" type="password" placeholder="••••••••" required />
+        </label>
+        <button type="submit">Create account</button>
+      </form>
+      <pre id="register-result" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Login</h2>
+      <form id="login-form" autocomplete="off">
+        <label>Email
+          <input name="email" type="email" placeholder="user@example.com" required />
+        </label>
+        <label>Password
+          <input name="password" type="password" placeholder="••••••••" required />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+      <pre id="login-result" class="result"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Your API Key</h2>
+      <div class="api-key" id="api-key">—</div>
+      <div class="actions">
+        <button id="copy-key" type="button" disabled>Copy</button>
+        <button id="clear-key" type="button" disabled>Clear</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> QRZMail</small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
