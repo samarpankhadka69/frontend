@@ -1,0 +1,22 @@
+:root {
+  --bg: #0f172a; --card: #111827; --border: #1f2937; --text: #e5e7eb;
+  --muted: #9ca3af; --accent: #22d3ee; --danger: #f87171; --ok: #34d399;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  background:radial-gradient(1200px 800px at 80% -10%,rgba(34,211,238,.12),transparent 60%),
+             radial-gradient(800px 500px at 10% 120%,rgba(52,211,153,.10),transparent 60%),var(--bg);
+  color:var(--text)}
+.site-header,.site-footer{max-width:1100px;margin:0 auto;padding:16px;display:flex;align-items:center;justify-content:space-between}
+.site-header nav{display:flex;gap:12px;align-items:center}
+a,button{color:var(--text);background:transparent;border:1px solid var(--border);padding:8px 12px;border-radius:10px;text-decoration:none;cursor:pointer}
+a:hover,button:hover{border-color:var(--accent);box-shadow:0 0 0 2px rgba(34,211,238,.12) inset}
+.grid{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--border);border-radius:16px;padding:18px;backdrop-filter:blur(3px)}
+h1,h2{margin:0 0 12px} label{display:block;font-size:14px;color:var(--muted);margin:10px 0 6px}
+input{width:100%;padding:10px 12px;background:#0b1220;color:var(--text);border:1px solid var(--border);border-radius:10px}
+input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 2px rgba(34,211,238,.12)}
+.result{margin-top:10px;min-height:44px;background:#0b1220;border:1px dashed var(--border);border-radius:10px;padding:10px;color:var(--muted);white-space:pre-wrap;word-break:break-word}
+.api-key{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;background:#0b1220;border:1px dashed var(--border);border-radius:10px;padding:10px;min-height:42px}
+.actions{margin-top:10px;display:flex;gap:10px}
+.ok{color:var(--ok)} .err{color:var(--danger)}
